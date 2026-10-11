@@ -1,3 +1,4 @@
 .agentengine/
 .env.*
 .devcontainer/
+!.env.example
