@@ -1,0 +1,100 @@
+{
+ "seconds_simulated": 60.08,
+ "wall_seconds": 153.7,
+ "seed": 0,
+ "arm_speed": 0.6,
+ "balance": 35.0,
+ "counts": {
+  "red_in_bin": 7,
+  "blue_in_bin": 0,
+  "red_missed": 0,
+  "blue_passed": 3,
+  "dropped": 0
+ },
+ "picks": {
+  "attempts": 7,
+  "held": 7,
+  "log": [
+   "t=9.4s pick at (224,24) mm: held",
+   "t=15.8s pick at (204,24) mm: held",
+   "t=22.2s pick at (210,22) mm: held",
+   "t=30.5s pick at (215,22) mm: held",
+   "t=39.4s pick at (226,23) mm: held",
+   "t=48.1s pick at (217,24) mm: held",
+   "t=54.6s pick at (195,24) mm: held"
+  ]
+ },
+ "ledger": [
+  {
+   "t": 9.3,
+   "obj": 3,
+   "kind": "red_square",
+   "outcome": "bin",
+   "amount": 5.0
+  },
+  {
+   "t": 15.72,
+   "obj": 2,
+   "kind": "red_square",
+   "outcome": "bin",
+   "amount": 5.0
+  },
+  {
+   "t": 22.1,
+   "obj": 19,
+   "kind": "red_square",
+   "outcome": "bin",
+   "amount": 5.0
+  },
+  {
+   "t": 30.42,
+   "obj": 13,
+   "kind": "red_square",
+   "outcome": "bin",
+   "amount": 5.0
+  },
+  {
+   "t": 34.16,
+   "obj": 16,
+   "kind": "blue_circle",
+   "outcome": "end",
+   "amount": 0.0
+  },
+  {
+   "t": 39.34,
+   "obj": 11,
+   "kind": "red_square",
+   "outcome": "bin",
+   "amount": 5.0
+  },
+  {
+   "t": 43.38,
+   "obj": 23,
+   "kind": "blue_circle",
+   "outcome": "end",
+   "amount": 0.0
+  },
+  {
+   "t": 48.02,
+   "obj": 1,
+   "kind": "red_square",
+   "outcome": "bin",
+   "amount": 5.0
+  },
+  {
+   "t": 54.54,
+   "obj": 17,
+   "kind": "red_square",
+   "outcome": "bin",
+   "amount": 5.0
+  },
+  {
+   "t": 56.34,
+   "obj": 7,
+   "kind": "blue_circle",
+   "outcome": "end",
+   "amount": 0.0
+  }
+ ],
+ "environment": "simulation"
+}

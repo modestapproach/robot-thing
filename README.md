@@ -54,11 +54,38 @@ The arm is the **SO-101** (TheRobotStudio / Hugging Face LeRobot). Nothing about
 Python 3.12 is required (MuJoCo has no Intel-Mac wheel for 3.14; LeRobot needs ≥3.12). On Intel Macs MuJoCo is
 capped at 3.10.0 and Ruckig 0.19.4 builds from source (about a minute).
 
+## Conveyor pick-and-sort cell (SO-101)
+
+A camera-watched conveyor carries a random mix of **red squares** (24 mm cubes) and **blue circles** (24 mm discs)
+out of a bucket feeder. The SO-101 picks as many red squares as it can into a bin and earns fictional money:
+
+| Outcome | Money |
+|---|---|
+| red square in the bin | +$5.00 |
+| blue circle in the bin | −$3.00 |
+| red square falls off the end | −$1.00 |
+| item dropped on the table | −$0.50 |
+| blue circle rides off the end | $0.00 |
+
+```bash
+.venv/bin/pip install -e '.[conveyor]'
+.venv/bin/python scripts/run_conveyor.py --seconds 60     # video: docs/media/conveyor_pick_demo.mp4, ledger: docs/conveyor_last_run.json
+```
+
+Built from existing pieces, nothing hand-made for the robot: MuJoCo physics (a conveyor of 43 velocity-driven capsule
+rollers, so items ride by friction), the MuJoCo Menagerie SO-101 (its jaw collision pads make grasps real contacts),
+an overhead camera rendered by MuJoCo with **OpenCV** colour + shape detection projected to metric belt coordinates,
+mink IK with the jaws squared to each cube, Ruckig trajectories, and a **Gymnasium** environment
+(`simulation/conveyor/env.py`, reward = money; passes `gymnasium.utils.env_checker`) for RL libraries.
+The baseline policy (`simulation/conveyor/picker.py`) stops the line when a red square reaches the pick line,
+re-detects with a clear view, grasps, drops it in the bin and restarts the line. Latest 60 s run: **$35.00**,
+7/7 picks held, 0 wrong items, 0 misses (simulated).
+
 ## What runs today (no hardware, no cloud)
 
 ```bash
 python3.12 -m venv .venv && .venv/bin/pip install -e '.[dev,sim]' anthropic raindrop-ai
-.venv/bin/python -m pytest -q                       # 52 tests: safety, idempotency, lifecycle, promotion, resume, SO-101, mink/Ruckig, collisions
+.venv/bin/python -m pytest -q                       # 57 tests: safety, idempotency, lifecycle, promotion, resume, SO-101, mink/Ruckig, collisions, conveyor
 .venv/bin/python scripts/run_campaign.py --fresh    # the 6-scene demo end to end
 ```
 

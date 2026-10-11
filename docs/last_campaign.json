@@ -7,85 +7,85 @@
   "trials": [
    {
     "scenario": "cal_01",
-    "experiment_id": "exp_1a12cd08bc5_aa800e",
-    "error_mm": 5.039692446235907,
+    "experiment_id": "exp_1a12d1c355a_37935c",
+    "error_mm": 5.0399187859233905,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "cal_02",
-    "experiment_id": "exp_1a12cd08f47_681a6d",
-    "error_mm": 7.241606159920445,
+    "experiment_id": "exp_1a12d1c39fb_2c0b5c",
+    "error_mm": 7.076393372131983,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "cal_03",
-    "experiment_id": "exp_1a12cd0939c_e260be",
-    "error_mm": 7.079165890605774,
+    "experiment_id": "exp_1a12d1c3dfe_96552f",
+    "error_mm": 6.9681706437355,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "cal_04",
-    "experiment_id": "exp_1a12cd0970e_05db9d",
-    "error_mm": 4.331145331969367,
+    "experiment_id": "exp_1a12d1c421b_2b26c0",
+    "error_mm": 4.217506580084251,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "cal_05",
-    "experiment_id": "exp_1a12cd09fa6_bf176b",
-    "error_mm": 5.456680142755736,
+    "experiment_id": "exp_1a12d1c47ce_08aee7",
+    "error_mm": 5.5963996229447295,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "cal_06",
-    "experiment_id": "exp_1a12cd0a3ae_c1d78c",
-    "error_mm": 4.764444654267014,
+    "experiment_id": "exp_1a12d1c4bbf_fb9663",
+    "error_mm": 4.658754229067625,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_01",
-    "experiment_id": "exp_1a12cd0a773_32b542",
-    "error_mm": 4.673459796340453,
+    "experiment_id": "exp_1a12d1c4fc5_a729fe",
+    "error_mm": 4.726108491049891,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_02",
-    "experiment_id": "exp_1a12cd0aab9_bc2f34",
-    "error_mm": 6.836020091071548,
+    "experiment_id": "exp_1a12d1c53d3_b21fa1",
+    "error_mm": 6.737900587345203,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_03",
-    "experiment_id": "exp_1a12cd0aecf_bc02a6",
-    "error_mm": 6.459888394991088,
+    "experiment_id": "exp_1a12d1c57b0_642c9f",
+    "error_mm": 6.297455421225155,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_04",
-    "experiment_id": "exp_1a12cd0b235_24b3b0",
-    "error_mm": 4.59020093864893,
+    "experiment_id": "exp_1a12d1c5b8f_0c149a",
+    "error_mm": 4.515911234059517,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_05",
-    "experiment_id": "exp_1a12cd0b5e1_b40c4f",
-    "error_mm": 5.808779333086337,
+    "experiment_id": "exp_1a12d1c603f_37272e",
+    "error_mm": 5.951685482436389,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_06",
-    "experiment_id": "exp_1a12cd0b904_b8a41a",
-    "error_mm": 5.71194041492148,
+    "experiment_id": "exp_1a12d1c64d9_9a7708",
+    "error_mm": 5.582198429250482,
     "success": false,
     "retries": 1
    }
@@ -93,42 +93,42 @@
  },
  "recalibrate": {
   "parent": "twin_so101_v0",
-  "twin_version_id": "twin_1a12cd0be8a_fbb197",
+  "twin_version_id": "twin_1a12d1c6c33_b29119",
   "summary": {
-   "batch_id": "batch_1a12cd0be86_6217d8",
+   "batch_id": "batch_1a12d1c6c2f_c08e19",
    "environment": "simulation",
    "candidates": 8,
    "rejected_inadmissible": 1,
-   "prediction_rmse_mm_parent": 5.75129507803737,
-   "prediction_rmse_mm_new": 0.3999902373012224,
+   "prediction_rmse_mm_parent": 5.695121247914703,
+   "prediction_rmse_mm_new": 0.38151085225642234,
    "ranking": [
     {
      "index": 2,
-     "rmse": 0.4
+     "rmse": 0.382
     },
     {
      "index": 5,
-     "rmse": 0.942
+     "rmse": 0.934
     },
     {
      "index": 4,
-     "rmse": 0.948
+     "rmse": 0.94
     },
     {
      "index": 1,
-     "rmse": 1.62
+     "rmse": 1.59
     },
     {
      "index": 6,
-     "rmse": 2.056
+     "rmse": 2.054
     },
     {
      "index": 3,
-     "rmse": 2.058
+     "rmse": 2.056
     },
     {
      "index": 0,
-     "rmse": 5.751
+     "rmse": 5.695
     }
    ],
    "rejections": [
@@ -137,10 +137,10 @@
      "reason": "scale outside physically plausible range [0.9, 1.1]",
      "candidate": {
       "offset_mm": {
-       "x": 118.60981758174776,
-       "y": 96.62675978355793
+       "x": 118.68521746137182,
+       "y": 96.59083753736907
       },
-      "rotation_deg": -88.78445491883917,
+      "rotation_deg": -88.81479423828095,
       "scale": 1.25,
       "calibration_version": "nominal_tape"
      }
@@ -153,10 +153,10 @@
    "before": {
     "n": 8,
     "success_rate": 0.0,
-    "mean_error_mm": 5.7762173954016385,
-    "median_error_mm": 5.460899363929112,
-    "rmse_mm": 5.86884481941301,
-    "p90_error_mm": 7.419943848632782,
+    "mean_error_mm": 5.7287694971048095,
+    "median_error_mm": 5.411634925512415,
+    "rmse_mm": 5.833656875370079,
+    "p90_error_mm": 7.518560505516102,
     "unknown_rate": 0.0,
     "observations_per_task": 3.0,
     "movements_per_task": 2.0,
@@ -166,10 +166,10 @@
    "after": {
     "n": 8,
     "success_rate": 1.0,
-    "mean_error_mm": 0.40662572049051254,
-    "median_error_mm": 0.3793858135690277,
-    "rmse_mm": 0.4391912353402872,
-    "p90_error_mm": 0.6573637347656189,
+    "mean_error_mm": 0.4243195416415577,
+    "median_error_mm": 0.38061705260563927,
+    "rmse_mm": 0.46435427205981367,
+    "p90_error_mm": 0.7378915248558021,
     "unknown_rate": 0.0,
     "observations_per_task": 2.0,
     "movements_per_task": 1.0,
@@ -177,48 +177,48 @@
     "sim_previews_per_task": 0.0
    },
    "n_targets": 8,
-   "rmse_reduction": 0.9251656418163372
+   "rmse_reduction": 0.9204008254204433
   },
   "trials": [
    {
     "scenario": "sel_01",
-    "experiment_id": "exp_1a12cd0e4dc_036bd9",
-    "error_mm": 0.846131455265801,
+    "experiment_id": "exp_1a12d1ca140_a55999",
+    "error_mm": 0.796130563943821,
     "success": true,
     "retries": 0
    },
    {
     "scenario": "sel_02",
-    "experiment_id": "exp_1a12cd0e691_6ab7b6",
-    "error_mm": 0.21311203079380106,
+    "experiment_id": "exp_1a12d1ca41e_8ac648",
+    "error_mm": 0.12224984354614603,
     "success": true,
     "retries": 0
    },
    {
     "scenario": "sel_03",
-    "experiment_id": "exp_1a12cd0e8da_ff0f84",
-    "error_mm": 0.40891983746167954,
+    "experiment_id": "exp_1a12d1ca6bc_b93e96",
+    "error_mm": 0.4435281744722714,
     "success": true,
     "retries": 0
    },
    {
     "scenario": "sel_04",
-    "experiment_id": "exp_1a12cd0eb04_f950a4",
-    "error_mm": 0.5192846170029756,
+    "experiment_id": "exp_1a12d1ca938_3e8086",
+    "error_mm": 0.4858099089903035,
     "success": true,
     "retries": 0
    },
    {
     "scenario": "sel_05",
-    "experiment_id": "exp_1a12cd0edd9_2d9548",
-    "error_mm": 0.5992214333042978,
+    "experiment_id": "exp_1a12d1cac34_a20da6",
+    "error_mm": 0.6600223398313401,
     "success": true,
     "retries": 0
    },
    {
     "scenario": "sel_06",
-    "experiment_id": "exp_1a12cd0f070_907d24",
-    "error_mm": 0.45110536715364746,
+    "experiment_id": "exp_1a12d1caf4e_6763a1",
+    "error_mm": 0.44754119482386573,
     "success": true,
     "retries": 0
    }
@@ -228,43 +228,43 @@
   "trials": [
    {
     "scenario": "sel_01",
-    "experiment_id": "exp_1a12cd0f52e_3dd86a",
-    "error_mm": 4.637675672612223,
+    "experiment_id": "exp_1a12d1cb323_5cee3b",
+    "error_mm": 4.515946555905432,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_02",
-    "experiment_id": "exp_1a12cd0f8a1_4bead1",
-    "error_mm": 5.697645659113755,
+    "experiment_id": "exp_1a12d1cb834_cdafa6",
+    "error_mm": 5.64942729216685,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_03",
-    "experiment_id": "exp_1a12cd0fc14_5d4e2d",
-    "error_mm": 6.004492216147811,
+    "experiment_id": "exp_1a12d1cbc75_ae9621",
+    "error_mm": 6.014182361343066,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_04",
-    "experiment_id": "exp_1a12cd0fff5_398640",
-    "error_mm": 5.345690948490203,
+    "experiment_id": "exp_1a12d1cc0df_d71483",
+    "error_mm": 5.329218749795199,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_05",
-    "experiment_id": "exp_1a12cd1054c_8cdab0",
-    "error_mm": 4.310898519814669,
+    "experiment_id": "exp_1a12d1cc518_6a3ae6",
+    "error_mm": 4.454732387225863,
     "success": false,
     "retries": 1
    },
    {
     "scenario": "sel_06",
-    "experiment_id": "exp_1a12cd108d7_2f8ac5",
-    "error_mm": 5.941254012431085,
+    "experiment_id": "exp_1a12d1cc99f_daf038",
+    "error_mm": 5.906512051961824,
     "success": false,
     "retries": 1
    }
@@ -279,13 +279,13 @@
   "diagnosis": {
    "n_failures": 6,
    "n_total": 6,
-   "mean_error_mm": 5.322942838101624,
+   "mean_error_mm": 5.311669899733039,
    "bias_xy_mm": [
-    3.7807287744239524,
-    -3.7402930768120384
+    3.7630872506555186,
+    -3.738396820594968
    ],
-   "bias_to_spread": 7.130175636447567,
-   "retry_gain_mm": 0.014687508955694076,
+   "bias_to_spread": 7.09629973491759,
+   "retry_gain_mm": 0.03101906006476307,
    "board_moved_seen": false,
    "hypotheses": [
     {
@@ -296,12 +296,12 @@
     {
      "id": "environment_changed_since_calibration",
      "support": "moderate",
-     "evidence": "board_moved flag not set; retry without re-observation recovered +0.01 mm"
+     "evidence": "board_moved flag not set; retry without re-observation recovered +0.03 mm"
     },
     {
      "id": "calibration_offset",
      "support": "strong",
-     "evidence": "mean error vector (+3.78, -3.74) mm is systematic"
+     "evidence": "mean error vector (+3.76, -3.74) mm is systematic"
     }
    ]
   },
@@ -309,75 +309,75 @@
   "engine": "deterministic",
   "outcomes": [
    {
-    "proposal_id": "mut_1a12cd10db9_1bdd48",
-    "candidate_id": "hv_1a12cd10d9a_b980d5",
+    "proposal_id": "mut_1a12d1ccff1_57361a",
+    "candidate_id": "hv_1a12d1ccfb8_b73cbc",
     "mutation_type": "parameter",
     "hypothesis": "Misses are transient actuation noise; more retries of the same command will land within tolerance.",
     "decision": "reject",
     "reasons": [
-     "no material improvement (RMSE gain +2.1%, success 0.00 -> 0.00)",
+     "no material improvement (RMSE gain +2.2%, success 0.00 -> 0.00)",
      "too many extra physical movements per task"
     ],
-    "evaluation_id": "eval_1a12cd1651a_0a0842"
+    "evaluation_id": "eval_1a12d1d26b4_04ed4e"
    },
    {
-    "proposal_id": "mut_1a12cd16643_7a8488",
-    "candidate_id": "hv_1a12cd16632_246c41",
+    "proposal_id": "mut_1a12d1d2873_a99274",
+    "candidate_id": "hv_1a12d1d283f_c8d655",
     "mutation_type": "workflow",
     "hypothesis": "The environment changed after calibration (systematic bias, board-moved flag, retries without re-observation recover nothing). Checking board pose and calibration confidence before precision moves, then re-observing and replanning from the measured miss, recovers the task.",
     "decision": "approve",
     "reasons": [
-     "RMSE 5.43 -> 0.60 mm (+88.9%); success 0% -> 100%",
-     "physical stage [SO-101 physics sim]: RMSE 5.36 -> 0.55 mm (+89.7%); success 0% -> 100%"
+     "RMSE 5.39 -> 0.59 mm (+89.0%); success 0% -> 100%",
+     "physical stage [SO-101 physics sim]: RMSE 5.37 -> 0.54 mm (+89.9%); success 0% -> 100%"
     ],
-    "evaluation_id": "eval_1a12cd213c6_deecc7"
+    "evaluation_id": "eval_1a12d1dab5b_35cd8c"
    }
   ],
-  "trace_id": "trace_1a12cd10c21_9c9180"
+  "trace_id": "trace_1a12d1ccdfa_38e963"
  },
  "recovered": {
-  "harness": "hv_1a12cd16632_246c41",
+  "harness": "hv_1a12d1d283f_c8d655",
   "version": 2,
   "trials": [
    {
     "scenario": "sel_01",
-    "experiment_id": "exp_1a12cd21c8c_4b6f1e",
-    "error_mm": 0.5515583517457744,
+    "experiment_id": "exp_1a12d1dafc8_7955c9",
+    "error_mm": 0.4894623274713629,
     "success": true,
     "retries": 1
    },
    {
     "scenario": "sel_02",
-    "experiment_id": "exp_1a12cd22553_6835a2",
-    "error_mm": 1.030672441825906,
+    "experiment_id": "exp_1a12d1db587_9e60c7",
+    "error_mm": 1.0457813774929472,
     "success": true,
     "retries": 1
    },
    {
     "scenario": "sel_03",
-    "experiment_id": "exp_1a12cd22ee7_5f8247",
-    "error_mm": 0.9262381649806243,
+    "experiment_id": "exp_1a12d1dba52_303378",
+    "error_mm": 0.9168685809304088,
     "success": true,
     "retries": 1
    },
    {
     "scenario": "sel_04",
-    "experiment_id": "exp_1a12cd23510_2b860b",
-    "error_mm": 0.3891451371312204,
+    "experiment_id": "exp_1a12d1dbe98_ed0493",
+    "error_mm": 0.39525627072808617,
     "success": true,
     "retries": 1
    },
    {
     "scenario": "sel_05",
-    "experiment_id": "exp_1a12cd23ae0_77fee1",
-    "error_mm": 0.19886346787517425,
+    "experiment_id": "exp_1a12d1dc2fc_46b931",
+    "error_mm": 0.34410137616954206,
     "success": true,
     "retries": 1
    },
    {
     "scenario": "sel_06",
-    "experiment_id": "exp_1a12cd24221_5f96a4",
-    "error_mm": 0.5096299842897719,
+    "experiment_id": "exp_1a12d1dc850_22438f",
+    "error_mm": 0.5114360167772356,
     "success": true,
     "retries": 1
    }
@@ -387,19 +387,19 @@
   "diagnosis": {
    "n_failures": 0,
    "n_total": 6,
-   "mean_error_mm": 0.6010179246414119,
+   "mean_error_mm": 0.6171509915949305,
    "bias_xy_mm": [
-    0.1254973576361008,
-    0.11545514900302341
+    0.11526167853570257,
+    0.16631989277755346
    ],
-   "bias_to_spread": 0.24113053362060774,
-   "retry_gain_mm": 4.639711328942087,
+   "bias_to_spread": 0.28823312100276743,
+   "retry_gain_mm": 4.641443376025158,
    "board_moved_seen": true,
    "hypotheses": [
     {
      "id": "transient_actuation_noise",
      "support": "moderate",
-     "evidence": "bias/spread=0.2; noise would give ratio < 1"
+     "evidence": "bias/spread=0.3; noise would give ratio < 1"
     },
     {
      "id": "environment_changed_since_calibration",
@@ -409,7 +409,7 @@
     {
      "id": "calibration_offset",
      "support": "weak",
-     "evidence": "mean error vector (+0.13, +0.12) mm is systematic"
+     "evidence": "mean error vector (+0.12, +0.17) mm is systematic"
     }
    ]
   },
@@ -417,18 +417,18 @@
   "engine": "deterministic",
   "outcomes": [
    {
-    "proposal_id": "mut_1a12cd2492c_04ef21",
-    "candidate_id": "hv_1a12cd2490f_50fc11",
+    "proposal_id": "mut_1a12d1dceba_f1ba07",
+    "candidate_id": "hv_1a12d1dce8e_37f896",
     "mutation_type": "experiment_policy",
     "hypothesis": "Choosing calibration targets where the twin's predictive variance is highest (with a workspace coverage floor) identifies the board transform in fewer physical observations.",
     "decision": "approve",
     "reasons": [
      "observations to reach 0.6 mm held-out twin RMSE: 8.28 -> 5.92 (+28.4%); reached 95% -> 100% over 40 identical randomized problems"
     ],
-    "evaluation_id": "eval_1a12cd25688_768323"
+    "evaluation_id": "eval_1a12d1dd4e2_eb2410"
    }
   ],
-  "trace_id": "trace_1a12cd247e4_6fe55b"
+  "trace_id": "trace_1a12d1dcdb7_22c3f4"
  },
  "report": {
   "harness_lineage": [
@@ -440,46 +440,46 @@
     "reason": "Baseline: observe, plan, execute, verify, retry once."
    },
    {
-    "id": "hv_1a12cd10d9a_b980d5",
+    "id": "hv_1a12d1ccfb8_b73cbc",
     "version": 2,
     "status": "REJECTED",
     "parent": "hv_v1_baseline",
     "reason": "Misses are transient actuation noise; more retries of the same command will land within tolerance."
    },
    {
-    "id": "hv_1a12cd16632_246c41",
+    "id": "hv_1a12d1d283f_c8d655",
     "version": 2,
     "status": "SUPERSEDED",
     "parent": "hv_v1_baseline",
     "reason": "The environment changed after calibration (systematic bias, board-moved flag, retries without re-observation recover nothing). Checking boar"
    },
    {
-    "id": "hv_1a12cd2490f_50fc11",
+    "id": "hv_1a12d1dce8e_37f896",
     "version": 3,
     "status": "ACTIVE",
-    "parent": "hv_1a12cd16632_246c41",
+    "parent": "hv_1a12d1d283f_c8d655",
     "reason": "Choosing calibration targets where the twin's predictive variance is highest (with a workspace coverage floor) identifies the board transfor"
    }
   ],
   "evaluations": [
    {
-    "candidate": "hv_1a12cd10d9a_b980d5",
+    "candidate": "hv_1a12d1ccfb8_b73cbc",
     "decision": "reject",
     "reasons": [
-     "no material improvement (RMSE gain +2.1%, success 0.00 -> 0.00)",
+     "no material improvement (RMSE gain +2.2%, success 0.00 -> 0.00)",
      "too many extra physical movements per task"
     ]
    },
    {
-    "candidate": "hv_1a12cd16632_246c41",
+    "candidate": "hv_1a12d1d283f_c8d655",
     "decision": "approve",
     "reasons": [
-     "RMSE 5.43 -> 0.60 mm (+88.9%); success 0% -> 100%",
-     "physical stage [SO-101 physics sim]: RMSE 5.36 -> 0.55 mm (+89.7%); success 0% -> 100%"
+     "RMSE 5.39 -> 0.59 mm (+89.0%); success 0% -> 100%",
+     "physical stage [SO-101 physics sim]: RMSE 5.37 -> 0.54 mm (+89.9%); success 0% -> 100%"
     ]
    },
    {
-    "candidate": "hv_1a12cd2490f_50fc11",
+    "candidate": "hv_1a12d1dce8e_37f896",
     "decision": "approve",
     "reasons": [
      "observations to reach 0.6 mm held-out twin RMSE: 8.28 -> 5.92 (+28.4%); reached 95% -> 100% over 40 identical randomized problems"

@@ -25,3 +25,4 @@ agentengine/*/.env
 .agentengine/
 .venv-ae/
 dashboard/.modelence.env
+!docs/media/*.mp4

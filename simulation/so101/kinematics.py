@@ -53,6 +53,7 @@ class So101Kinematics:
         self.down_task.set_target(DOWN)
         self.posture = mink.PostureTask(self.m, cost=1e-3)
         self.limits = [mink.ConfigurationLimit(self.m)]
+        self.extra_tasks: list = []  # e.g. an AxisAlignTask that lines the jaws up with a part
 
     def fk(self, q: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
         """Tool point (m) and tool axis (unit vector) in F_base for arm joints ``q``."""
@@ -66,7 +67,7 @@ class So101Kinematics:
         self.cfg.update(q_full)
         self.posture.set_target(q_full)
         self.pos_task.set_target(mink.SE3.from_translation(target_m))
-        tasks = [self.pos_task, self.down_task, self.posture]
+        tasks = [self.pos_task, self.down_task, self.posture, *self.extra_tasks]
         it = 0
         for it in range(1, iters + 1):
             v = mink.solve_ik(self.cfg, tasks, 0.02, "daqp", damping=1e-3, limits=self.limits)

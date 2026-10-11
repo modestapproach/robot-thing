@@ -9,9 +9,10 @@ dependencies = ["numpy", "pydantic>=2", "fastapi", "uvicorn", "pymongo", "httpx"
 dev = ["pytest"]
 vision = ["opencv-contrib-python"]
 sim = ["mujoco==3.10.0", "mink==1.3.0", "qpsolvers[daqp]", "ruckig==0.19.4"]
+conveyor = ["opencv-python-headless", "gymnasium", "pillow"]
 
 [tool.setuptools]
-packages = ["shared", "harness", "evaluation", "simulation", "robot_gateway", "agents", "agents.operator", "agents.scientist", "orchestrator"]
+packages = ["shared", "harness", "evaluation", "simulation", "simulation.so101", "simulation.conveyor", "robot_gateway", "robot_gateway.drivers", "agents", "agents.operator", "agents.scientist", "orchestrator"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
