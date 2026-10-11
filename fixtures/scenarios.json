@@ -1,0 +1,20 @@
+{
+  "scenario_set_id": "targets_v1",
+  "note": "Target positions in F_board mm. Partitioned per PRD §14.4. The Scientist never receives the 'protected' group.",
+  "calibration": [
+    {"id": "cal_01", "x": 30, "y": 30}, {"id": "cal_02", "x": 170, "y": 30},
+    {"id": "cal_03", "x": 170, "y": 120}, {"id": "cal_04", "x": 30, "y": 120},
+    {"id": "cal_05", "x": 100, "y": 75}, {"id": "cal_06", "x": 60, "y": 100}
+  ],
+  "selection": [
+    {"id": "sel_01", "x": 50, "y": 50}, {"id": "sel_02", "x": 150, "y": 50},
+    {"id": "sel_03", "x": 150, "y": 100}, {"id": "sel_04", "x": 50, "y": 100},
+    {"id": "sel_05", "x": 100, "y": 40}, {"id": "sel_06", "x": 120, "y": 110}
+  ],
+  "protected": [
+    {"id": "pro_01", "x": 40, "y": 70}, {"id": "pro_02", "x": 160, "y": 80},
+    {"id": "pro_03", "x": 90, "y": 130}, {"id": "pro_04", "x": 110, "y": 20},
+    {"id": "pro_05", "x": 70, "y": 45}, {"id": "pro_06", "x": 135, "y": 125},
+    {"id": "pro_07", "x": 185, "y": 15}, {"id": "pro_08", "x": 15, "y": 135}
+  ]
+}

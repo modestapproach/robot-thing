@@ -1,0 +1,28 @@
+[project]
+name = "autolab-scientist"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "agent-engine-runner-shared",
+  "agent-engine-sdk-langgraph",
+  "langchain-anthropic",
+  "langgraph",
+  "numpy",
+  "pydantic>=2",
+  "pymongo",
+  "httpx",
+  "anthropic",
+  "raindrop-ai",
+  "mujoco==3.10.0",
+  "mink==1.3.0",
+  "qpsolvers[daqp]",
+  "ruckig==0.19.4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# autolab core is vendored into src/ by scripts/sync_agent_core.py before build
+packages = ["src/autolab_scientist", "src/shared", "src/harness", "src/evaluation", "src/simulation", "src/robot_gateway", "src/agents", "src/orchestrator", "src/fixtures"]

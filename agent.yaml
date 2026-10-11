@@ -1,0 +1,6 @@
+# Atlas Agent Engine monorepo index (PRD §9.1). Run CLI commands from this directory.
+agents:
+  - name: autolab-operator
+    path: agentengine/autolab-operator
+  - name: autolab-scientist
+    path: agentengine/autolab-scientist

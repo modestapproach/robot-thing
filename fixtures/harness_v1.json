@@ -1,0 +1,20 @@
+{
+  "_id": "hv_v1_baseline",
+  "version": 1,
+  "parent_version_id": null,
+  "status": "ACTIVE",
+  "workflow_steps": [
+    {"op": "observe"},
+    {"op": "plan_move"},
+    {"op": "execute_move"},
+    {"op": "verify"},
+    {"op": "retry_or_recover"},
+    {"op": "record"}
+  ],
+  "memory_policy": {"retrieve_prior_failures": false, "max_episodes": 0, "retrieve_procedures": false},
+  "retry_policy": {"max_retries": 1, "reobserve_before_retry": false, "replan_before_retry": false},
+  "experiment_policy": {"selection": "random", "coverage_floor": 0.0, "simulation_budget": 50},
+  "model_config_ref": "default",
+  "created_by": "system",
+  "proposal_reason": "Baseline: observe, plan, execute, verify, retry once."
+}

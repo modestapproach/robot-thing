@@ -1,0 +1,13 @@
+{
+  "board_id": "board_a4_v1",
+  "description": "ChArUco calibration board printed on A4, landscape, measured with calipers.",
+  "width_mm": 200.0,
+  "height_mm": 150.0,
+  "squares_x": 8,
+  "squares_y": 6,
+  "square_length_mm": 25.0,
+  "marker_length_mm": 18.0,
+  "aruco_dictionary": "DICT_4X4_50",
+  "safe_height_mm": 40.0,
+  "frame": "F_board: origin at bottom-left board corner, x right, y up, mm"
+}

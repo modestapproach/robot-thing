@@ -1,0 +1,6 @@
+2026-10-11 13:09:25 | INFO     | root:795 | Logging initialized: level=INFO, file=logs/autolab-scientist-aer.log
+2026-10-11 13:09:25 | WARNING  | agent_engine_runner_shared.tracing.setup:275 | No instrumentor hook registered. Framework SDK should call register_instrumentor() to enable tracing.
+2026-10-11 13:09:25 | INFO     | agent_engine_runner_shared.tracing.setup:287 | httpx instrumentation enabled (traceparent propagation)
+2026-10-11 13:09:25 | INFO     | agent_engine_runner_shared.tracing.setup:260 | Tracing enabled for 'autolab-scientist'
+2026-10-11 13:09:25 | INFO     | agent_engine_runner_shared.runtime:420 | Tracing enabled
+2026-10-11 13:09:25 | INFO     | agent_engine_runner_shared.runtime:252 | TenantRuntime initialized: mode=aer, app=autolab-scientist

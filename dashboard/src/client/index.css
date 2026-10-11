@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@source "./";
+
+/* ------------------------------------------------------------------ AutoLab theme
+ * Dark instrument-panel aesthetic. See DESIGN.md.
+ * The scaffold's components use Tailwind's default gray/white/black/blue/red
+ * classes; we remap those palettes to the lab palette (an inverted, low-chroma
+ * scale) so every starter surface inherits the theme without forking components.
+ */
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "IBM Plex Sans", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* lab surfaces */
+  --color-lab-bg: #0a0d0e;
+  --color-lab-panel: #10161a;
+  --color-lab-raised: #161f23;
+  --color-lab-line: #213030;
+  --color-lab-grid: #172120;
+  --color-lab-text: #dbe5e1;
+  --color-lab-dim: #8a9a96;
+  --color-lab-faint: #56665f;
+
+  /* evidence semantics: never mix these up */
+  --color-measured: #5ad1b8;   /* camera-measured on real hardware */
+  --color-simulated: #b59cf5;  /* digital twin / simulation / mock arm */
+  --color-replay: #8fb4e8;     /* replayed historical data */
+  --color-target: #ece6d2;     /* requested target */
+
+  /* restrained status */
+  --color-ok: #6cd38f;
+  --color-warn: #e6b450;
+  --color-fail: #f0705f;
+
+  /* remapped scaffold palette (dark inversion) */
+  --color-white: #10161a;
+  --color-black: #dbe5e1;
+  --color-gray-50: #141b1f;
+  --color-gray-100: #182125;
+  --color-gray-200: #213030;
+  --color-gray-300: #2c3c3b;
+  --color-gray-400: #485955;
+  --color-gray-500: #6c7c78;
+  --color-gray-600: #8a9a96;
+  --color-gray-700: #a8b6b2;
+  --color-gray-800: #c3cfcb;
+  --color-gray-900: #dbe5e1;
+  --color-gray-950: #eef4f1;
+  --color-blue-50: #0f2421;
+  --color-blue-100: #12302b;
+  --color-blue-200: #17423b;
+  --color-blue-300: #1f5a50;
+  --color-blue-400: #2f8a78;
+  --color-blue-500: #3fb8a0;
+  --color-blue-600: #5ad1b8;
+  --color-blue-700: #79dcc7;
+  --color-blue-800: #9fe8d8;
+  --color-red-50: #2a1513;
+  --color-red-100: #351a17;
+  --color-red-200: #4c221d;
+  --color-red-300: #6e2f28;
+  --color-red-500: #e0604f;
+  --color-red-600: #f0705f;
+  --color-red-700: #f39385;
+  --color-red-800: #f6b0a6;
+
+  --radius-panel: 10px;
+  --radius-chip: 6px;
+
+  --animate-fade-in: fade-in 280ms ease-out both;
+  --animate-slide-up: slide-up 360ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-pulse-dot: pulse-dot 1.6s ease-in-out infinite;
+  --animate-scan: scan 2.4s linear infinite;
+
+  @keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
+  @keyframes slide-up { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+  @keyframes pulse-dot { 0%, 100% { opacity: 1 } 50% { opacity: 0.35 } }
+  @keyframes scan { from { transform: translateX(-100%) } to { transform: translateX(100%) } }
+}
+
+html { color-scheme: dark; }
+body {
+  background-color: var(--color-lab-bg);
+  background-image:
+    linear-gradient(var(--color-lab-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-lab-grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+  color: var(--color-lab-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--color-blue-300); color: var(--color-gray-950); }
+
+/* stagger helper: style={{ '--i': n }} */
+.stagger > * { animation: var(--animate-slide-up); animation-delay: calc(var(--i, 0) * 45ms); }
+.tabular { font-variant-numeric: tabular-nums; }
+
+
+/* Base UI: establish a stacking context at the root so portalled
+   popups (Dialog, Select, Menu, Tooltip) layer above page content. */
+html {
+  isolation: isolate;
+}
+body {
+  position: relative;
+}

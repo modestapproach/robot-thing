@@ -1,0 +1,10 @@
+# Agent Engine project config: long-term memory extraction (PRD §9.3).
+# Numeric robotics state never goes here; it lives in the experiment collections.
+memory:
+  voyage:
+    model: "voyage-4-large"
+    dimension: 1024
+  extraction_llm:
+    provider: anthropic
+  extraction:
+    enabled: [semantic, episodic, procedural]

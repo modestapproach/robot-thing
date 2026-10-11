@@ -1,0 +1,27 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.modelence/
+*.mp4
+artifacts/
+.pytest_cache/
+.autolab-state.pkl*
+
+# vendored by scripts/sync_agent_core.py
+agentengine/*/src/shared/
+agentengine/*/src/harness/
+agentengine/*/src/evaluation/
+agentengine/*/src/simulation/
+agentengine/*/src/robot_gateway/
+agentengine/*/src/agents/
+agentengine/*/src/orchestrator/
+agentengine/*/src/fixtures/
+agentengine/*/.env
+.agentengine/
+.venv-ae/
+dashboard/.modelence.env

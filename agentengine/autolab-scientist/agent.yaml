@@ -1,0 +1,36 @@
+name: autolab-scientist
+entrypoint: autolab_scientist.graph:app
+description: "Investigates robot positioning failures, runs calibration experiments on the digital twin, and proposes versioned harness mutations for independent review."
+agent_card:
+  summary: "AutoLab Scientist: diagnosis, simulated experiments, harness mutation proposals."
+  capabilities:
+    - investigate robotics failures
+    - retrieve experiment history
+    - run calibration simulation batches
+    - propose versioned harness improvements
+    - explain evaluation results
+features:
+  memory: true
+  guardrails: false
+  playground: true
+a2a:
+  enabled: true
+  allowed_callers: ["ws-6acc0b4ef638d6502445e5dc"]   # autolab-operator only
+  skills:
+    - name: investigate-failures
+      description: "Diagnose recent failed experiments and submit competing harness mutations for independent review."
+      example_input: '{"experiment_ids": ["exp_..."], "focus": "task_failures"}'
+    - name: improve-experiment-policy
+      description: "Propose a better calibration-target selection policy and submit it for review."
+      example_input: '{"focus": "experiment_policy"}'
+  input_modes: ["text/plain"]
+  output_modes: ["text/plain"]
+scaling:
+  replicas: 1
+sandboxes:
+  agent:
+    secrets: [MONGODB_URI, AUTOLAB_DB, RAINDROP_WRITE_KEY, A2A_JWT_SECRET]
+    tools: []
+  tool:
+    secrets: [ANTHROPIC_API_KEY]
+    tools: [invoke_llm]

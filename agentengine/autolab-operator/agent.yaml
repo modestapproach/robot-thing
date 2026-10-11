@@ -1,0 +1,33 @@
+name: autolab-operator
+entrypoint: autolab_operator.graph:app
+description: "Runs bounded robot tasks under the active, pinned harness version and delegates failure investigation to the Scientist."
+agent_card:
+  summary: "AutoLab Operator: executes approved procedures through the safety-enforcing robot gateway."
+  capabilities:
+    - plan a bounded robotic task
+    - inspect the approved operating policy
+    - request observations
+    - submit allowed physical actions
+    - report execution outcomes
+features:
+  memory: true
+  guardrails: false
+  playground: true
+a2a:
+  enabled: true
+  allowed_callers: []
+  skills:
+    - name: run-target-task
+      description: "Move the tool to a board target under the active harness and report the measured error."
+      example_input: '{"scenario_id": "sel_01", "x": 50, "y": 50}'
+  input_modes: ["text/plain"]
+  output_modes: ["text/plain"]
+scaling:
+  replicas: 1
+sandboxes:
+  agent:
+    secrets: [MONGODB_URI, AUTOLAB_DB, ROBOT_GATEWAY_URL, ROBOT_GATEWAY_KEY, RAINDROP_WRITE_KEY, A2A_JWT_SECRET]
+    tools: []
+  tool:
+    secrets: [ANTHROPIC_API_KEY]
+    tools: [invoke_llm]
