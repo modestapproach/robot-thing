@@ -8,6 +8,26 @@ mutations; a deterministic evaluator tests every candidate on protected held-out
 physical stage) and is the only thing that can promote. Everything is persisted in one Atlas database and shown live
 in a Modelence dashboard; agent runs are traced to Raindrop.
 
+## Quick start (for someone cloning this repo)
+
+```bash
+git clone https://github.com/modestapproach/robot-thing.git && cd robot-thing
+python3.12 -m venv .venv && .venv/bin/pip install -e '.[dev,sim]' anthropic raindrop-ai pillow
+cp .env.example .env                                  # fill in keys; leave MONGODB_URI empty to run offline
+.venv/bin/python -m pytest -q                         # 52 tests
+.venv/bin/python scripts/run_campaign.py --fresh      # full SO-101 campaign, offline
+.venv/bin/python scripts/render_demo_video.py         # writes docs/media/autolab_so101_demo.mp4
+```
+
+Dashboard (needs a MongoDB URI with the database name in the path):
+
+```bash
+cd dashboard && npm install && cp .modelence.env.example .modelence.env   # fill in MONGODB_URI + AUTOLAB_API_KEY
+npm run dev                                                               # http://localhost:3001
+```
+
+No keys are committed. Templates: `.env.example`, `dashboard/.modelence.env.example`, `agentengine/*/.env.example`.
+
 ## SO-101 digital twin
 
 The arm is the **SO-101** (TheRobotStudio / Hugging Face LeRobot). Nothing about its geometry is hand-made:
